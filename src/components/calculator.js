@@ -1,42 +1,59 @@
+import { useState } from "react";
+import calculate from "../logic.js/calculate";
+import PropTypes from "prop-types";
+
 
 const Calculator = () => {
-  const createNumbers = () => {
-    const digits = [];
-      for (let i = 1; i < 10; i++) {
-        digits.push(
-          <Button key={i} name={i}/>,
-        );
-      }
-      return digits;
+  const [result, setResult] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+
+  const handleClick = (e) => {
+    setResult(calculate(result, e.target.textContent));
   };
-  
+
   return (
     <div className="calculator">
-      <div className="result"><span>0</span></div>
+      <div className="result"><span>{result.next || result.total || '0'}</span></div>
       <div className="numbers">
         <div className="operators"> 
-          <Button key="&#247;" name="&#247;"/>
-          <Button key="&times;" name="&times;"/>
-          <Button key="-" name="-"/>
-          <Button key="+" name="+"/>
-          <Button key="=" name="="/>
+          <Button handleClick={ handleClick } key="&#247;" name="&#247;"/>
+          <Button handleClick={ handleClick } key="x" name="x" />
+          <Button handleClick={ handleClick } key="-" name="-" />
+          <Button handleClick={ handleClick } key="+" name="+" />
+          <Button handleClick={ handleClick } key="=" name="=" />
         </div>
         <div className="digits">
-          <Button key="AC" name="AC"/>
-          <Button key="+/-" name="+/-"/>
-          <Button key="%" name="%"/>
-          { createNumbers() }
-          <Button key="0" name="0"/>
-          <Button key="." name="."/>
+          <Button handleClick={ handleClick } key="AC" name="AC" />
+          <Button handleClick={ handleClick } key="+/-" name="+/-" />
+          <Button handleClick={ handleClick } key="%" name="%" />
+          <Button handleClick={ handleClick } key="9" name="9" />
+          <Button handleClick={ handleClick } key="8" name="8" />
+          <Button handleClick={ handleClick } key="7" name="7" />
+          <Button handleClick={ handleClick } key="6" name="6" />
+          <Button handleClick={ handleClick } key="5" name="5" />
+          <Button handleClick={ handleClick } key="4" name="4" />
+          <Button handleClick={ handleClick } key="3" name="3" />
+          <Button handleClick={ handleClick } key="2" name="2" />
+          <Button handleClick={ handleClick } key="1" name="1" />
+          <Button handleClick={ handleClick } key="0" name="0" />
+          <Button handleClick={ handleClick } key="." name="." />
         </div>
       </div>
     </div>
   );
 };
   
-const Button = (props) => {
-  return (<button key={props.name}>{props.name}</button>)
+const Button = ({ handleClick, name}) => {
+  return (<button onClick={handleClick} key={name}>{name}</button>)
 };
-  
+
+Button.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+};
+
 export default Calculator;
   
