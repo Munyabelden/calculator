@@ -1,7 +1,8 @@
+
 const Calculator = () => {
   const createNumbers = () => {
     const digits = [];
-      for (let i = 1; i < 10; i+1) {
+      for (let i = 1; i < 10; i++) {
         digits.push(
           <Button key={i} name={i}/>,
         );
