@@ -3,11 +3,11 @@ import { useState, useEffect } from "react"
 function Qoute() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      try{
         const res = await fetch("https://api.api-ninjas.com/v1/trivia?category=mathematics", {
         method: "GET",
         headers: {
@@ -19,16 +19,19 @@ function Qoute() {
       for(let i=0; i < json.length; i++) {
         setData(json[i])
       }
-      } catch {
-        alert("error")
-      }
-      setLoading(false);
+      setLoading(false)
     }
     fetchData()
-  }, [setData, setLoading]);
+  }, [setData]);
 
   if(loading){
     return(<p>Loading....</p>)
+  }
+  if(!data){
+    setError('There has been a problem loading the quote');
+    return(
+      <p>{error}</p>
+    )
   }
 
   return (
