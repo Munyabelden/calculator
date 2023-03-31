@@ -23,6 +23,15 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    gap: 35px;
+  }
+
+  .qoutes p {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    width: 550px;
+    font-family: sans-serif;
   }
   
   .calculator {

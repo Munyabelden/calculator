@@ -2,7 +2,6 @@ import { useState } from "react";
 import calculate from "../logic.js/calculate";
 import PropTypes from "prop-types";
 
-
 const Calculator = () => {
   const [result, setResult] = useState({
     total: null,
