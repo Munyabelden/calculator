@@ -8,27 +8,31 @@ function Qoute() {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
+      try {
         const res = await fetch("https://api.api-ninjas.com/v1/trivia?category=mathematics", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "X-API-Key": "JxzhlyKScID2Xd/m0Lxq+w==ByBXhjJGRx0ruEch",
-        },
-      })
-      const json = await res.json()
-      for(let i=0; i < json.length; i++) {
-        setData(json[i])
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "X-API-Key": "JxzhlyKScID2Xd/m0Lxq+w==ByBXhjJGRx0ruEch",
+          },
+        })
+        const json = await res.json()
+        for(let i=0; i < json.length; i++) {
+          setData(json[i])
+        }
+        setLoading(false)
+      } catch(err) {
+       setError(err)
       }
-      setLoading(false)
-    }
+
+  }
     fetchData()
   }, [setData]);
 
   if(loading){
     return(<p>Loading....</p>)
   }
-  if(!data){
-    setError('There has been a problem loading the quote');
+  if(!data && !loading){
     return(
       <p>{error}</p>
     )
