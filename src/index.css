@@ -6,6 +6,13 @@
   font-family: sans-serif;
 }
 
+h2 {
+  border-left: 4px solid rgb(237, 149, 71);
+  padding: 10px;
+  font-size: 25px;
+  color: rgb(21, 25, 29);
+}
+
 li {
   list-style: none;
 }
@@ -22,7 +29,7 @@ div {
 button {
   border: 0.5px solid rgb(221, 225, 226);
   border-radius: 0;
-  padding: 20px 30px;
+  padding: 30px 60px;
   background: #fff;
 }
 

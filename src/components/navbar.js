@@ -10,7 +10,7 @@ const links = [
 const Navbar = () => {
   return (
     <nav className="navigation">
-      <h1>Math Magician</h1>
+      <h1>Math Magicians</h1>
       <ul>
         {links.map(link => {
             return ( 
