@@ -5,9 +5,27 @@
   align-items: center;
   width: 100%;
   margin-top: -80px;
+  padding: 20px;
 }
 
 .navigation ul {
   display: flex;
-  flex-direction: row;    
+  flex-direction: row;
+}
+
+.navigation ul li {
+  border-right: 2px solid rgb(237, 149, 71) ;
+  padding: 3px 10px;
+}
+
+.navigation ul li a {
+  color: gray;
+}
+
+.navigation ul li a:hover {
+  color: darkgray;
+}
+
+.navigation h1 {
+  font-size: 40px;
 }
