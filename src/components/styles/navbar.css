@@ -1,0 +1,33 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 2%;
+  margin: 0;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.navigation ul li {
+  border-right: 2px solid rgb(237, 149, 71) ;
+  padding: 3px 10px;
+}
+
+.navigation ul li a {
+  color: gray;
+}
+
+.navigation ul li a:hover {
+  color: darkgray;
+}
+
+.navigation h1 {
+  font-size: 40px;
+}

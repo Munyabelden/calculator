@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
 function Qoute() {
   const [data, setData] = useState([]);
@@ -24,8 +24,7 @@ function Qoute() {
       } catch(err) {
        setError(err)
       }
-
-  }
+    }
     fetchData()
   }, [setData]);
 
@@ -42,7 +41,7 @@ function Qoute() {
     <div className="qoutes">
         <p>{data.question} - {data.answer}</p>
     </div>
-  )
+  );
 }
 
 export default Qoute;

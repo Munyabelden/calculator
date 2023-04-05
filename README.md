@@ -55,12 +55,12 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
  
 - Make sure you have node.js a code editor like Vs Code and git bash
-- clone this to your local machine: [Math Magician](https://github.com/Munyabelden/Calculator-app.git)
+- clone this to your local machine: [Math Magician](https://github.com/Munyabelden/calculator.git)
 ### Setup
 
 Clone this repository to your desired folder:
 ```
- git clone https://github.com/Munyabelden/Calculator-app.git
+ git clone https://github.com/Munyabelden/calculator.git
  ```
 
 ### Install
@@ -99,7 +99,7 @@ github pages or any hosting you like
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Munyabelden/Calculator-App/issues).
+Feel free to check the [issues page](https://github.com/Munyabelden/calculator/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,6 +119,6 @@ I would like to thank Microverse
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Munyabelden/Math-Magician/blob/develop/LICENSE) licensed.
+This project is [MIT](https://github.com/Munyabelden/calculator/blob/feature/full-website/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -1,0 +1,50 @@
+.maths {
+  display: flex;
+  flex-direction: row;
+  align-items: first baseline;
+  justify-content: space-between;
+  width: 95%;
+  margin-top: 80px;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background: rgb(185, 189, 190);
+  padding: 15px 5px;
+  color: #fff;
+}
+
+.result > span {
+  font-size: 22px;
+}
+
+.operators > button {
+  background: rgb(237, 149, 71);
+}
+
+.operators {
+  display: flex;
+  flex-direction: column;
+}
+
+.digits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.digits > button:nth-last-child(2) {
+  grid-column: 1 / span 2;
+}
