@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Qoute from "../displayQoute";
 
 const mockResponse = {
-  quote: "Love is enough",
+  quote: "/Love is enough/",
 };
 
 beforeEach(() => {
@@ -18,6 +18,6 @@ afterEach(() => {
 
 test("displays the quote and author", async () => {
   render(<Qoute />);
-  const quoteElement = await screen.findByText(mockResponse.quote);
+  const quoteElement = await screen.findByText(mockResponse.quote, "i");
   expect(quoteElement).toBeInTheDocument();
 });
