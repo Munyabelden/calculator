@@ -24,6 +24,8 @@
       "dist/",
       "build/",
       "components/",
+      "__tests__(2)/",
+      "__tests__/",
       "logic.js/",
       "setupTest.js",
       "App.js"

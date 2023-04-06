@@ -9,7 +9,7 @@ function Qoute() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await fetch("https://api.api-ninjas.com/v1/trivia?category=mathematics", {
+        const res = await fetch("https://api.api-ninjas.com/v1/quotes?category=success", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -39,7 +39,7 @@ function Qoute() {
 
   return (
     <div className="qoutes">
-        <p>{data.question} - {data.answer}</p>
+        <p>{data.quote}</p>
     </div>
   );
 }
