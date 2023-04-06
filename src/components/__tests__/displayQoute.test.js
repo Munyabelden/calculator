@@ -16,7 +16,7 @@ afterEach(() => {
   global.fetch.mockRestore();
 });
 
-test("displays the quote and author", async () => {
+test("displays the quote", async () => {
   render(<Qoute />);
   const quoteElement = await screen.findByText(mockResponse.quote, "i");
   expect(quoteElement).toBeInTheDocument();
