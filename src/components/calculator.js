@@ -18,7 +18,7 @@ const Calculator = () => {
     <div className="maths">
       <h2>Let's do some math!</h2>
       <div className="calculator">
-        <div className="result"><span>{result.next || result.total || '0'}</span></div>
+        <div className="result" data-testid="result"><span>{result.next || result.total || '0'}</span></div>
         <div className="numbers">
           <div className="operators"> 
             <Button handleClick={ handleClick } key="&#247;" name="&#247;"/>
